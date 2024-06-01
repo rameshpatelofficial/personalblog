@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICAN for CA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <header class="navbar">
+        <span class="logo" id="logo">
+<a href="index.html"><img src="image/logo.png" alt="Logo" class="image_logo">
+</a>
+        </span>
+        <span class="navigation">
+            <ul class="navigation_item">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a onclick="showSignup()">Sign Up</a></li>
+                <li><a onclick="showLogin()">Log In</a></li>
+            </ul>
+        </span>
+    </header>
+    <div class="body">
+        <div class="signup" id="signup">
+            <div class="body_image">
+                <img src="image/group.jpg" alt="">
+            </div>
+            <div class="signup_form">
+                <form action="submit.php" method="post" onsubmit="return signup_validateform();" id="signup_form">
+                    <input type="text" name="name" id="name" placeholder="Enter your name" class="input border">
+                    <input type="email" placeholder="Enter your email" name="email" id="signup_email"
+                        class="input border">
+                    <input type="password" placeholder="Enter your password" name="password" id="signup_password"
+                        class="input border">
+                    <input type="number" placeholder="Enter your number" name="Phone" id="phone" class="input border">
+                    <div class="switch">
+                        <div class="btn input">
+                            <input type="reset" value="Reset" name="reset" class="button" id="signup_reset">
+                            <input type="submit" value="Sign Up" name="submit" class="button" id="signup_submit">
+                        </div>
+                        <p>Already Member? <a onclick="showLogin()">Log In</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="login" id="login">
+            <div class="login_form">
+                <form action="submit.php" method="post" onsubmit="return login_validateform();" id="login_form">
+                    <input type="email" placeholder="Enter your email" name="email" id="login_email"
+                        class="input border">
+                    <input type="password" placeholder="Enter your password" name="password" id="login_password"
+                        class="input border">
+                    <div class="switch">
+                        <div class="btn input">
+                            <input type="reset" value="Reset" name="reset" class="button" id="login_reset">
+                            <input type="submit" value="Log In" name="submit" class="button" id="login_submit">
+                        </div>
+                        <p>Not Register? <a onclick="showSignup()">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+            <div class="body_image">
+                <img src="image/group.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright 2024 | ABC Company Ltd. All Right Reserved © 2024 <br> Developed By : ABC Technologies Pvt. Ltd.
+        </p>
+    </footer>
+</body>
+
+<script>document.getElementById("login").style.display = "none";
+    function showSignup() {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("signup").style.display = "flex";
+    }
+    function showLogin() {
+        document.getElementById("signup").style.display = "none";
+        document.getElementById("login").style.display = "flex";
+    }
+    </script>
+</html>
