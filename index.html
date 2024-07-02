@@ -1,89 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+	<head>
+		<title>Travel Agency</title>
+		<link rel="stylesheet" href="style.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICAN for CA</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+	</head>
+	<body>
+		<!-- display flex -->
+		<header class="page_header">
+			<!-- display flex -->
+			<span class="travel">
+				<img class="logo_img" src="images/logo.png" alt=" " />
 
-</head>
-
-<body>
-    <header class="navbar">
-        <span class="logo" id="logo">
-<a href="index.html"><img src="image/logo.png" alt="Logo" class="image_logo">
-</a>
-        </span>
-        <span class="navigation">
-            <ul class="navigation_item">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a onclick="showSignup()">Sign Up</a></li>
-                <li><a onclick="showLogin()">Log In</a></li>
-            </ul>
-        </span>
-    </header>
-    <div class="body">
-        <div class="signup" id="signup">
-            <div class="body_image">
-                <img src="image/group.jpg" alt="">
-            </div>
-            <div class="signup_form">
-                <form action="submit.php" method="post" onsubmit="return signup_validateform();" id="signup_form">
-                    <input type="text" name="name" id="name" placeholder="Enter your name" class="input border">
-                    <input type="email" placeholder="Enter your email" name="email" id="signup_email"
-                        class="input border">
-                    <input type="password" placeholder="Enter your password" name="password" id="signup_password"
-                        class="input border">
-                    <input type="number" placeholder="Enter your number" name="Phone" id="phone" class="input border">
-                    <div class="switch">
-                        <div class="btn input">
-                            <input type="reset" value="Reset" name="reset" class="button" id="signup_reset">
-                            <input type="submit" value="Sign Up" name="submit" class="button" id="signup_submit">
-                        </div>
-                        <p>Already Member? <a onclick="showLogin()">Log In</a></p>
-                    </div>
-                </form>
-            </div>
+				<h1 class="logo_text"><a id="travel" href="index.html"> TRAVEL</a></h1>
+			</span>
+			<!-- display flex -->
+			<nav class="navbar">
+				<ol class="navbar_list">
+					<li class="home">
+						<a href="index.html">HOME</a>
+					</li>
+					<li class="about">
+						<a href="about.html">ABOUT</a>
+					</li>
+					<li class="contact">
+						<a href="contact.html">CONTACT</a>
+					</li>
+					<li class="schedule">
+						<a href="schedule.html">SCHEDULE</a>
+					</li>
+					<li class="blog">
+						<a href="blog.html">BLOG</a>
+					</li>
+				</ol>
+			</nav>
+		</header>
+		<main>
+			<!--  flex item  start-->
+			<div id="flex_box">
+				<!-- first flex item -->
+				<span class="photo_section">
+					<div class="plane">
+					<img class="plane1 hight" src="images/plane1.png" alt="">
+				   	 <!-- <img class="plane2 hight" src="images/plane2.png" alt="">  -->
         </div>
-        <div class="login" id="login">
-            <div class="login_form">
-                <form action="submit.php" method="post" onsubmit="return login_validateform();" id="login_form">
-                    <input type="email" placeholder="Enter your email" name="email" id="login_email"
-                        class="input border">
-                    <input type="password" placeholder="Enter your password" name="password" id="login_password"
-                        class="input border">
-                    <div class="switch">
-                        <div class="btn input">
-                            <input type="reset" value="Reset" name="reset" class="button" id="login_reset">
-                            <input type="submit" value="Log In" name="submit" class="button" id="login_submit">
-                        </div>
-                        <p>Not Register? <a onclick="showSignup()">Sign Up</a></p>
-                    </div>
-                </form>
-            </div>
-            <div class="body_image">
-                <img src="image/group.jpg" alt="">
-            </div>
-        </div>
-    </div>
-    <footer>
-        <p>Copyright 2024 | ABC Company Ltd. All Right Reserved © 2024 <br> Developed By : ABC Technologies Pvt. Ltd.
-        </p>
-    </footer>
-</body>
+				<img class="travelling_girl" src="images/travelling_girl.jpg" alt="" />
+    
+					<div class="circle">
+						<div class="content">
+							<h2 class="info_about_travel"><a id="about_travel" href="about.html">GET INFO ABOUT TRAVEL</a></h2>
+						</div>
+					</div>
+				</span>
+				<!-- second flex item -->
+				<span class="text_section">
+					<h1 class="about_travelling">All <span id="about">About</span> Travelling</h1>
+					<p class="paragraph">Travel is the movement of people between distant geographical locations. Travel can be done by foot, bicycle, automobile, train, boat, bus, airplane, ship or other means, with or without luggage, and can be one way or round</p>
+					<button class="sub_button">SUBSCRIBE</button>
+					<input class="email" type="email" name="email" placeholder="Enter Your Email Here" />
 
-<script>document.getElementById("login").style.display = "none";
-    function showSignup() {
-        document.getElementById("login").style.display = "none";
-        document.getElementById("signup").style.display = "flex";
-    }
-    function showLogin() {
-        document.getElementById("signup").style.display = "none";
-        document.getElementById("login").style.display = "flex";
-    }
-    </script>
+					<span class="social_link">
+						<span class="website">
+							<a class="agency_website" href="https://www.travel.com" target="_blank">www.travel.com</a>
+						</span>
+						<span class="social_icon">
+							<a class="instagram_logo" href="https://www.instagram.com/" target="_blank">
+								<img class="image_height" src="images/instagram.png" alt="" />
+
+							</a>
+							<a class="facebook_logo" href="https://www.facebook.com/" target="_blank">
+								<img class="image_height" src="images/facebook.png" alt="" />
+
+							</a>
+							<a class="twitter_logo" href="https://twitter.com/" target="_blank">
+								<img class="image_height" src="images/twitter.png" alt="" />
+
+							</a>
+							<a class="whatsapp_logo" href="https://www.whatsapp.com/" target="_blank">
+								<img class="image_height" src="images/whatsapp.png" alt="" />
+
+							</a>
+						</span>
+					</span>
+				</span>
+			</div>
+			<!-- flex item end -->
+		</main>
+	</body>
 </html>
